@@ -17,6 +17,7 @@ namespace ProjectFoodRecall.Data_Access
 
 
 
-        public DbSet<Recall_Item> Recall_Items { get; set; }
+        public DbSet<Recall_Item> Recall_Items_data { get; set; }
+        public DbSet<Recall_Items> Recall_Items { get; set; }
     }
 }

@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 namespace ProjectFoodRecall.Models
 {
 
-    //public class Recall_Items
-    //{
-    //    [Key]
-    //    public int RecallsId { get; set; }
+    public class Recall_Items
+    {
+        [Key]
+        public int RecallsId { get; set; }
 
-    //    public Recall_Item[] results { get; set; }
-    //}
+        public List<Recall_Item> results { get; set; }
+    }
 
     public class Recall_Item
     {

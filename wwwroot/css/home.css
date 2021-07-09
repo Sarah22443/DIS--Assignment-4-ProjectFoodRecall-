@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Crimson Text', serif;
+}
+
+#banner {
+    background: url(~/img/fadedbanner.jpeg);
+    background-size: cover ;
+    background-position: center;
+    height: 100vh;
+}
+.logo{
+    position: center;
+    color-interpolation-filters: 10%;
+    width: 150px;
+    border-radius: 70%;
+    border: 5px solid rgb(252, 252, 252);
+}
+.banner-text{
+    text-align: center;
+    color: rgb(7, 7, 7);
+    padding-top: 100px;
+}
+.banner-text h1{
+    font-size: 90px;
+}
+.banner-text p1{
+    font-size: 35px;
+    font-family: 'Crimson Text', serif;
+}
+.banner-btn{
+    margin: 90px auto 0;
+    text-align: center;
+}
+
+.banner-btn a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: rgb(249, 249, 250);
+    border: 4px solid rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    transition: color 0.5s;
+
+}
+.banner-btn a span{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.banner-btn a:hover span{
+    width: 100%;
+}
+
+.banner-btn a:hover{
+    color: #000;
+}
+
+.dark {
+    position: left;
+    padding: 0;
+
+}
