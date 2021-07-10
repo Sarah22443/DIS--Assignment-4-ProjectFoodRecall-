@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ProjectFoodRecall.Models.Recall_Item>
+    <head>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+<table style="width:100%">
+    <tr>
+        <th>Report Date</th>
+        <th>Classification</th>
+        <th>City</th>
+        <th>Description</th>
+    </tr>
+    @foreach (var val in Model)
+    {
+<tr>
+    <td>@val.report_date</td>
+    <td>@val.classification</td>
+    <td>@val.city</td>
+    <td>@val.product_description</td>
+ 
+</tr>
+    }
+
+</table>
+
+

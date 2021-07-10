@@ -43,9 +43,19 @@ namespace ProjectFoodRecall.Controllers
 
                 if (!enforcementData.Equals(""))
                 {
+                    //need to remove the meta object from the string
+                    dynamic jsonData = JsonConvert.DeserializeObject(enforcementData);
+                    //to get only results object
+                    var resultsData = jsonData["results"];
+                    //convert json to string
+                    string jsonString = JsonConvert.SerializeObject(resultsData);
+                    //json[1];
                     // JsonConvert is part of the NewtonSoft.Json Nuget package
-                    enforcements.results = JsonConvert.DeserializeObject<List<Recall_Item>>(enforcementData);
+                    // binds with the model
+                    enforcements.results = JsonConvert.DeserializeObject<List<Recall_Item>>(jsonString);
+                    //add data to database tables
                     dbContext.Recall_Items.Add(enforcements);
+                    //save changes to the database
                     dbContext.SaveChanges();
                 }
                
@@ -56,7 +66,7 @@ namespace ProjectFoodRecall.Controllers
                 Console.WriteLine(e.Message);
             }
 
-            return View();
+            return View(dbContext.Recall_Items_data.ToList());
 
         }
 
@@ -64,6 +74,19 @@ namespace ProjectFoodRecall.Controllers
         {
             return View();
         }
+        public IActionResult Food()
+        {
+            return View();
+        }
+        public IActionResult Fda()
+        {
+            return View();
+        }
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
 
         public IActionResult Privacy()
         {

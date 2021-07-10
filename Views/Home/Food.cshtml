@@ -1,0 +1,129 @@
+﻿<head>
+
+    <link rel="stylesheet" type="text/css" href="group12/food.css">
+
+    <TITLE>FDA</TITLE>
+
+</head>
+<div class="fullscreen nopadding">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="food.html">Search Recalls</a></li>
+        <li><a href="fda.html">FDA</a></li>
+        <li><a href="aboutus.html">About US</a></li>
+
+    </ul>
+
+    <div class="header">
+        <h1>Food Recall</h1>
+    </div>
+</div>
+
+<div class="white nopadding more">
+    <a id="more">&#x25BC; More &#x25BC;</a>
+</div>
+
+<div class="white">
+    <a id="test"></a>
+
+    <p>
+        As food recalls are so common, the table below shows recent incidents of where, what, how and when specific food recalls happened. These recalls are quickly contained if the distribution pattern is limited to few states.
+    </p>
+
+    <p>
+        From the history and consequences of food-borne illnesses or even death, most US manufacturers and retailers work swiftly to comply with recalls whether mandated by FDA or not.
+    </p>
+
+    <p>When an FDA-regulated product is either defective or potentially harmful, recalling that product or removing it from the market or correcting the problem or is the most effective means for protecting the public.</p>
+
+    <p>
+    </p>
+
+    Classification:
+    <SELECT name="ddl">
+        <option value='Class I'>Class I</option>
+        <option value='Class II'>Class II</option>
+        <option value='Class III'>Class III</option>
+    </SELECT>
+
+    Country:
+    <SELECT name="ddl">
+        <option value='USA'>USA</option>
+        <option value='Canada'>Canada</option>
+        <option value='Mexico'>Mexico</option>
+        <option value='Other'>Other</option>
+    </SELECT>
+
+    Voluntary / Mandated:
+    <SELECT name="ddl">
+        <option value='Voluntary'>Voluntary</option>
+        <option value='Mandated'>Mandated</option>
+    </SELECT>
+
+    Status:
+    <SELECT name="ddl">
+        <option value='Terminated'>Terminated</option>
+        <option value='Ongoing'>Ongoing</option>
+    </SELECT>
+
+    <input type="submit" name="submitbtn" value="Submit">
+
+</div>
+
+<div class="semitrans">
+
+    <table>
+        <tr>
+            <th bgcolor="MediumSeaGreen">report_date</th>
+            <th bgcolor="MediumSeaGreen">status</th>
+            <th bgcolor="MediumSeaGreen">classification</th>
+            <th bgcolor="MediumSeaGreen">product_description</th>
+            <th bgcolor="MediumSeaGreen">reason_for_recall</th>
+            <th bgcolor="MediumSeaGreen">voluntary_mandated</th>
+            <th bgcolor="MediumSeaGreen">country</th>
+            <th bgcolor="MediumSeaGreen">state</th>
+            <th bgcolor="MediumSeaGreen">distribution_pattern</th>
+        </tr>
+
+        <tr>
+            <td>Sep/27/2012</td>
+            <td>Terminated</td>
+            <td>Class 1</td>
+            <td>Alfalfa Seeds</td>
+            <td>The firm's seeds linked to outbreak of Salmonella</td>
+            <td>Voluntary: Firm initiated</td>
+            <td>United States</td>
+            <td>FL</td>
+            <td>Florida, Nevada and the Dominican Republic</td>
+        </tr>
+
+        <tr>
+            <td>Dec/01/2012</td>
+            <td>Terminated</td>
+            <td>Class II</td>
+            <td>Stonyfield Organic Whole Milk Yogurt</td>
+            <td>Product has elevated levels of coliforms</td>
+            <td>Mandated by FDA</td>
+            <td>United States</td>
+            <td>NH</td>
+            <td>AL, DE, FL, GA, MD, NC, NJ, PA, SC, TN, VA  OR, Mt, AL, CA, WA</td>
+
+        </tr>
+
+        <tr>
+            <td>Jan/07/2013</td>
+            <td>Terminated</td>
+            <td>Class 1</td>
+            <td>Sliced Salad Olives</td>
+            <td>Each jar contained a piece of glass</td>
+            <td>Voluntary: Firm initiated</td>
+            <td>United States</td>
+            <td>VA</td>
+            <td>States Distributed To: Texas</td>
+        </tr>
+
+    </table>
+
+    <div class="dark">
+        <p>For more information visit <a href="https://open.fda.gov/">FDA Rules </a></p>
+    </div>
