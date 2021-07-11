@@ -1,29 +1,59 @@
 ﻿@model IEnumerable<ProjectFoodRecall.Models.Recall_Item>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>FDA</title>
+            <link rel="stylesheet" href="~/css/APICall.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+        </head>
+
+        <body>
+            <section id="banner">
+                <img src="~/img/logo4.jpeg" class="logo">
+                <div class="banner-text">
+
+                    <h1> All Food Recalls</h1>
+
+                </div>
+
+            </section>
+
+
+        </body>
+
     <head>
         <style>
             table, th, td {
                 border: 1px solid black;
+                padding: 10px;
             }
+
         </style>
     </head>
-<table style="width:100%">
-    <tr>
-        <th>Report Date</th>
-        <th>Classification</th>
-        <th>City</th>
-        <th>Description</th>
-    </tr>
-    @foreach (var val in Model)
-    {
-<tr>
-    <td>@val.report_date</td>
-    <td>@val.classification</td>
-    <td>@val.city</td>
-    <td>@val.product_description</td>
- 
-</tr>
-    }
+</html>
+    <table style="width:100%">
 
-</table>
+
+        <tr>
+            <th>Report Date</th>
+            <th>Classification</th>
+            <th>City</th>
+            <th>Description</th>
+        </tr>
+        @foreach (var val in Model)
+        {
+            <tr>
+                <td>@val.report_date</td>
+                <td>@val.classification</td>
+                <td>@val.city</td>
+                <td>@val.product_description</td>
+
+            </tr>
+        }
+
+    </table>
 
 
