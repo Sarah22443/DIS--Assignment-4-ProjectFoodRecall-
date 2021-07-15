@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Models\AddOrEdit.cshtml" />
+    <Content Remove="Views\Home\fdafaq.cshtml" />
+    <Content Remove="Views\Home\_Layout.cshtml" />
+    <Content Remove="wwwroot\css\StyleSheet.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.7" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>

@@ -1,0 +1,128 @@
+﻿@model IEnumerable<ProjectFoodRecall.Models.Recall_Item>
+@{
+    ViewData["Title"] = "Index";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SearchBy</title>
+    <link rel="stylesheet" href="~/css/SearchBy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section id="banner">
+        <img src="~/img/logo4.jpeg" class="logo">
+        <div class="banner-text">
+
+            <h1> Search Food Recalls</h1>
+
+        </div>
+
+    </section>
+
+</body>
+
+<h4>
+    @using (Html.BeginForm("SearchBy", "Home", FormMethod.Get))
+    {
+        <h3 style="color:midnightblue"> <b> Please select the Search Criteria : </b> </h3>
+        <br />
+        @Html.RadioButton("searchBy", "Voluntary or Mandated", true) <text >Voluntary or Mandated by the FDA</text>
+        <br />
+        @Html.RadioButton("searchBy", "Recalling Firm") <text>Recalling Firm</text>
+        <br />
+        @Html.TextBox("search") <input style="color:ThreeDDarkShadow" type="submit" value="Search" />
+    }
+</h4>
+
+<div>
+    <h3>
+        <a style="color:blue" asp-action="AddorEdit">Add Enforcement </a>   
+    </h3>
+</div>
+
+
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+</html>
+<table style="width:100%">
+
+    <thead>
+        <tr>
+            <th>Modify</th>
+            <th>Recalling Firm</th>
+            <th>Voluntary/Mandated</th>
+            <th>Reason for Recall</th>
+            <th>Code Information</th>
+            <th>Product Description</th>
+            <th>Report date</th>
+            <th>Recall Number</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td colspan="3" style="color:red">
+                    No Firm found.
+                </td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <a asp-action="AddorEdit" asp-route-id="@item.RecallId" class="text-black-50" onclick="return confirm('Authorized Access Only. Are you sure you want to continue?')">@*<i class="fa fa-marker fa-lg"></i>*@EDIT</a> |
+                        
+                        <a asp-action="Delete" asp-route-id="@item.RecallId" class="text-danger ml-1" onclick="return confirm('Are you sure you want to Delete this Incident?')">@*<i class="fa fa-trash-alt fa-lg"></i>*@DELETE</a>
+                    </td>
+                    <td>
+                        @item.recalling_firm
+                    </td>
+
+                    <td>
+                        @item.voluntary_mandated
+                    </td>
+                    <td>
+                        @item.reason_for_recall
+                    </td>
+                    <td>
+                        @item.code_info
+                    </td>
+
+                    <td>
+                        @item.product_description
+                    </td>
+                    <td>
+                        @item.report_date
+                    </td>
+                    <td>
+                        @item.recall_number
+                    </td>
+
+
+                </tr>
+            }
+        }
+    </tbody>
+
+
+</table>
+
+
+
+
+

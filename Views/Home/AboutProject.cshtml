@@ -1,36 +1,70 @@
-﻿<html>
+﻿@model IEnumerable<ProjectFoodRecall.Models.Recall_Item>
+
+@{ ViewData["Title"] = "AboutProject"; }
+    //Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<!DOCTYPE html>
+
+<!--
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AboutProject</title>
+</head>
+<body>
+</body>
+</html>
+-->
+
+<html lang="en">
+
+
 
 <head>
 
-    <link rel="stylesheet" type="text/css" href="~/css/fda.css">
+    <link rel="stylesheet" type="text/css" href="~/css/about.css">
 
     <TITLE>FDA</TITLE>
 
 </head>
-<body >
-    <div class="semitrans">
-        
-        <h1>Food Enforcement Overview</h1>
-        <p>The openFDA food enforcement reports API returns data from the FDA Recall Enterprise System (RES), a database that contains information on recall event information submitted to FDA.</p>
+
+<body text="white">
+
+
+    <div id="whitetext">
+
+        <h1 id="hdcol">Food Enforcement Overview</h1>
+
+
+
+        <p>
+
+            The openFDA food enforcement reports API returns data from the FDA Recall Enterprise System (RES), a database that contains information on recall event information submitted to FDA.
+
+
+
+        </p>
 
         <p>When an FDA-regulated product is either defective or potentially harmful, recalling that product or removing it from the market or correcting the problem or is the most effective means for protecting the public.</p>
-        <h1>First Alert</h1>
+
+        <h2 id="hdcol">First Alert</h2>
         <p>
             FDA first hears about a problem product in several ways:
-            <ol>
+            <ul>
                 <li> A company discovers a problem and contacts FDA. </li>
-                <br>
                 <li> FDA inspects a manufacturing facility and determines the potential for a recall.</li>
                 <li> FDA receives reports of health problems through various reporting systems.</li>
                 <li> The Centers for Disease Control and Prevention (CDC) contacts FDA.</li>
-            </ol>
+            </ul>
         </p>
-    </div>
 
-    <div class="semitrans" >
+        <p> When it comes to illnesses associated with food products, Dorothy J. Miller, Director of FDA's Office of Emergency Operations, says that FDA generally first hears of these kinds of problems from CDC.</p>
 
-        <h2   id="hdcol"> Alerting the Public </h2>
-        <p  > FDA seeks publicity about a recall only when it believes the public needs to be alerted to a serious hazard. When a recalled product has been widely distributed, the news media is a very effective way to reach large numbers of people. FDA can hold press conferences, issue press releases, and post updates to its Web site regularly, to alert people.</p>
+        <p> "CDC hears about such problems from state health departments that have received and submitted illness reports," she says. "An ongoing outbreak means that we have an emergency, and when there's a public health crisis like this, you need to tell the public immediately."</p>
+
+
+        <h2 id="hdcol"> Alerting the Public </h2>
+        <p> FDA seeks publicity about a recall only when it believes the public needs to be alerted to a serious hazard. When a recalled product has been widely distributed, the news media is a very effective way to reach large numbers of people. FDA can hold press conferences, issue press releases, and post updates to its Web site regularly, to alert people.</p>
 
         <h2 id="hdcol"> Effectiveness Checks </h2>
         <p> FDA evaluates whether all reasonable efforts have been made to remove or correct a product. A recall is considered complete after all of the company's corrective actions are reviewed by FDA and deemed appropriate. After a recall is completed, FDA makes sure that the product is destroyed or suitably reconditioned, and investigates why the product was defective in the first place.</p>
@@ -42,9 +76,9 @@
             <li>Class II: Products that might cause a temporary health problem, or pose only a slight threat of a serious nature. Example: a drug that is under-strength but that is not used to treat life-threatening situations.</li>
             <li>Class III: Products that are unlikely to cause any adverse health reaction, but that violate FDA labeling or manufacturing laws. Examples include: a minor container defect and lack of English labeling in a retail food.</li>
         </ol>
+
     </div>
 
-    <div class="dark" color="white">
-        <p>For more information visit <a href="https://open.fda.gov/">FDA Rules </a></p>
-    </div>
 </body>
+
+</html>
