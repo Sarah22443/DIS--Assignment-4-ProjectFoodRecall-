@@ -29,26 +29,26 @@ body {
 }
 
     .banner-text h1 {
-        font-size: 99px;
+        font-size: 90px;
     }
 
     .banner-text p1 {
-        font-size: 35px;
+        font-size: 40px;
         font-family: 'Crimson Text', serif;
     }
 
 .banner-btn {
-    margin: 70px auto 0;
+    margin: 75px auto 0;
     text-align: center;
-    font-size: 25px;
+    font-size:30px;
 }
 
     .banner-btn a {
-        width: 250px;
+        width: 600px;
         text-decoration: none;
         display: inline-block;
-        margin: 0 10px;
-        padding: 15px 0;
+        margin: 0 15px;
+        padding: 10px 0;
         color: rgb(249, 249, 250);
         border: 4px solid rgb(255, 255, 255);
         position: relative;
